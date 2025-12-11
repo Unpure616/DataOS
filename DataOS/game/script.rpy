@@ -1,37 +1,28 @@
-﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+init -100:
+    default gender = None
+    $ import random
 
 # these are the charecters speaking. the first letter of their name will be used to indicate the charecter. 
 # and the gender will be shown by the first letter. so say male Windows would be: wb.
-# if a names begining letter overlaps with an existing name. than add the letter next to it.
-
+# if a names begining letter overlaps with an existing name. than add the letter next to it. 
 # males:
-define wb = Character("Windows")
-define lb = Character("Linux")
-define mb = Character("Mac")
-define rb = Character("Redstar")
-define ab = Character("Android") 
-define Amb = Character("Amiga") 
-define ub = Character("Unix")
 
-# females:
-define wg = Character("Windows")
-define lg = Character("Linux")
-define mg = Character("Mac")
-define rg = Character("Redstar")
-define ag = Character("Android") 
-define Amg = Character("Amiga") 
-define ug = Character("Unix")
 
 #NDC aka none dateable charecters
 define data = Character("DataOS")
 
+# charecter gender by players choice 1 = female whilest 0 equals male while 2 = mix
 
 
-
-
+# affection defualts
+default love = 0
+default friendship = 0
+default respect = 0
+default affection = 0
+default trust = 0
 # The game starts here.
 
 label start:
@@ -42,7 +33,7 @@ label start:
    
     stop music 
 
-    scene bg room
+    scene ice
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -52,13 +43,58 @@ label start:
 
     # These display lines of dialogue.
 
- 
     play sound openos
-    data "welcome to DataOS."
+    data "welcome to DataOS" with dissolve 
     play music maintheme2 loop
     data "the biggest collection of dateable OS'es."
     data "before we begin"
     data "you must configure what you want your OS'es dateables to look like"
+   
+    menu pick_gender:
+        data "male or female or mixed?" with dissolve
+
+        "all female":
+            data "good choice"
+            $ gender = 1
+            $ win_gen = 1
+            $ lin_gen = 1
+            $ gcolor = "#e2a8ff"
+        "all male":
+            data "great choice"
+            $ gender = 0
+            $ win_gen = 0
+            $ lin_gen = 0
+            $ gcolor = "#57bcff"
+        "mix":
+            data "nice choice"
+            $ from a import reset
+            $ reset()
+            $ win_gen = random.randint(0,1)
+            $ lin_gen = random.randint(0,1)
+
+    data "gender is [gender]"
+        
+
+    show windowsi at truecenter
+    if win_gen:
+        w "wow i look pretty"
+    else:
+        w "wow Handsome"
+     
+    show linuxi at truecenter
+    if lin_gen:
+        l "girl"
+    else:
+        l "boy"
+
+
+
+
+
+
+
+
+
     # This ends the game.
 
     return
