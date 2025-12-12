@@ -93,15 +93,15 @@ label start:
     data "than here is some simple questions, you'll get answers to"
 
 menu ask_question:
-        data "questions?" 
+    data "questions?" with dissolve
 
-        "game mechanics?":
-            data "to be filled"
+    "game mechanics?":
+        data "to be filled"
             
-        "charecters":
-            data "to be filled"
-        "continue":
-            data "to me filled"
+    "charecters":
+        data "to be filled"
+    "continue":
+        data "to me filled"
     
     # This ends the game.
 
