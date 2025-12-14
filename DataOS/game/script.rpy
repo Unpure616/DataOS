@@ -73,28 +73,36 @@ label start:
             $ lin_gen = random.randint(0,1)
 
     data "gender is [gender]"
+    
+    
         
 
-    show windowsi at truecenter
-    if win_gen:
-        w "wow i look pretty"
-    else:
-        w "wow Handsome"
+    # show windowsi at truecenter
+    # if win_gen:
+    #     w "wow i look pretty"
+    # else:
+    #     w "wow Handsome"
      
-    show linuxi at truecenter
-    if lin_gen:
-        l "girl"
-    else:
-        l "boy"
+    # show linuxi at truecenter
+    # if lin_gen:
+    #     l "girl"
+    # else:
+    #     l "boy"
 
+    data "if this is your first time playing"
+    data "than here is some simple questions, you'll get answers to"
 
+menu ask_question:
+    data "questions?" with dissolve
 
-
-
-
-
-
-
+    "game mechanics?":
+        data "to be filled"
+            
+    "charecters":
+        data "to be filled"
+    "continue":
+        data "to me filled"
+    
     # This ends the game.
 
-    return
+return

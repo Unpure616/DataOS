@@ -299,7 +299,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("new") action Start()
 
         else:
 
@@ -308,8 +308,9 @@ screen navigation():
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
-
+        
         textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("instructions") action ShowMenu("instructions")
 
         if _in_replay:
 
@@ -1619,3 +1620,29 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+screen instructions():
+
+    tag menu
+
+    ## This use statement includes the game_menu screen inside this one. The
+    ## vbox child is then included inside the viewport inside the game_menu
+    ## screen.
+    use game_menu(_("instructions")):
+
+        style_prefix "instructions"
+
+        vbox:
+
+            hbox:
+                # teh instructions for the game
+                text "Allan please add details"
+
+
+style lore_label is gui_label
+style lore_label_text is gui_label_text
+style lore_text is gui_text
+
+style lore_label_text:
+    size gui.label_text_size
