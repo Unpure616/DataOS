@@ -1633,11 +1633,47 @@ screen instructions():
 
         style_prefix "instructions"
 
-        vbox:
+        viewport:
 
-            hbox:
-                # teh instructions for the game
-                text "Allan please add details"
+            viewport:
+                mousewheel True
+                scrollbars "vertical"
+                # the instructions for the game
+                text """MAIN INFO:
+
+Dating: 
+            Each datable OS has a love point system that goes in following order: 
+        
+        (Trust < respect < Affection < friendship < love )
+
+            the relationship points is what determines how far ina  relationship you are.
+
+            which based on points allows you to do more actions with your partner
+
+Home: 
+            you're fitted with your own personal, customizable home. 
+        
+            you will invite your OS datable of choice to your home.
+        
+            so to gain love points you'd be needing to buy stuff said OS may like.
+    
+    
+OS-Bucks:
+                The money system of the game is OS-Bucks. you gain OS-bucks by: 
+                        
+                    completing mini games, winning your OS'es heart, doing jobs etc.
+
+                use OS-bucks to buy gifts for your datable and to upgrade your home.
+    
+    
+Choices:
+            through out the game you'll be forced into taking choices. 
+            
+            your answer has an effect determining how your crush sees you.
+
+            which either can be negative or positive based on your actions.
+                
+"""
 
 
 style lore_label is gui_label

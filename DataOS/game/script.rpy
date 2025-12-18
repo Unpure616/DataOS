@@ -92,17 +92,32 @@ label start:
     data "if this is your first time playing"
     data "than here is some simple questions, you'll get answers to"
 
-menu ask_question:
-    data "questions?" with dissolve
+    menu ask_question:
+        data "Any questions before we begin?" with dissolve
 
-    "game mechanics?":
-        data "to be filled"
-            
-    "charecters":
-        data "to be filled"
-    "continue":
-        data "to me filled"
+        "game mechanics?":
+            data "you can find out by going to the 'instrcutions' menu" with dissolve 
+            jump ask_question    
+        "charecters":
+            data "the list pf datable OS'es include:"
+            data "Windows" with dissolve 
+            data "Linux" with dissolve 
+            data "MacOS" with dissolve 
+            data "Android" with dissolve 
+            data "Amiga" with dissolve 
+            data "Unix" with dissolve 
+            data "Redstar" with dissolve 
+            data "TempleOS" with dissolve 
+            data "DOS" with dissolve 
+            data "BSD" with dissolve 
+            data "BEOS" with dissolve 
+            data "Haiku" with dissolve 
+            jump ask_question 
+        "Begin game": 
+            play audio startgame
+            jump opening_park
     
-    # This ends the game.
 
-return
+
+    
+    
