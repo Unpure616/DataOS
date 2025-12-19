@@ -72,7 +72,7 @@ label start:
             $ win_gen = random.randint(0,1)
             $ lin_gen = random.randint(0,1)
 
-    data "gender is [gender]"
+    
     
     
         
@@ -91,7 +91,7 @@ label start:
 
     data "if this is your first time playing"
     data "than here is some simple questions, you'll get answers to"
-
+    stop music
     menu ask_question:
         data "Any questions before we begin?" with dissolve
 
@@ -99,19 +99,45 @@ label start:
             data "you can find out by going to the 'instrcutions' menu" with dissolve 
             jump ask_question    
         "charecters":
-            data "the list pf datable OS'es include:"
+            data "the list of datable OS'es include:"
+            stop music 
+            play music windows loop
             data "Windows" with dissolve 
+            stop music 
+            play music linux loop
             data "Linux" with dissolve 
+            stop music 
+            play music mac loop
             data "MacOS" with dissolve 
+            stop music 
+            play music android loop
             data "Android" with dissolve 
+            stop music
+            play music amiga loop
             data "Amiga" with dissolve 
+            stop music
+            play music unix loop
             data "Unix" with dissolve 
+            
+            play music redstar loop
             data "Redstar" with dissolve 
+            stop music
+            play music templeos loop
             data "TempleOS" with dissolve 
-            data "DOS" with dissolve 
+            stop music
+            play music dos loop
+            data "DOS" with dissolve
+            
             data "BSD" with dissolve 
+            stop music
+            play music bsd loop
             data "BEOS" with dissolve 
+            stop music 
+            play music haiku loop
             data "Haiku" with dissolve 
+            stop music
+            play music maintheme2
+        
             jump ask_question 
         "Begin game": 
             play audio startgame
