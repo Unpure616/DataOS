@@ -17,12 +17,7 @@ define data = Character("DataOS")
 # charecter gender by players choice 1 = female whilest 0 equals male while 2 = mix
 
 
-# affection defualts
-default love = 0
-default friendship = 0
-default respect = 0
-default affection = 0
-default trust = 0
+
 # The game starts here.
 
 label start:
@@ -44,9 +39,9 @@ label start:
     # These display lines of dialogue.
 
     play sound openos
-    data "welcome to DataOS" with dissolve 
+    data "haiii and welcome to DataOS" with dissolve 
     play music maintheme2 loop
-    data "the biggest collection of dateable OS'es."
+    data "im the biggest collection of Datable OS'es"
     data "before we begin"
     data "you must configure what you want your OS'es dateables to look like"
    
@@ -72,7 +67,7 @@ label start:
             $ win_gen = random.randint(0,1)
             $ lin_gen = random.randint(0,1)
 
-    data "gender is [gender]"
+    
     
     
         
@@ -91,7 +86,10 @@ label start:
 
     data "if this is your first time playing"
     data "than here is some simple questions, you'll get answers to"
-
+<<<<<<< HEAD
+=======
+    stop music
+>>>>>>> 63d4264d817a76cded6d6e00b194c8c6a4dd0afe
     menu ask_question:
         data "Any questions before we begin?" with dissolve
 
@@ -99,19 +97,70 @@ label start:
             data "you can find out by going to the 'instrcutions' menu" with dissolve 
             jump ask_question    
         "charecters":
-            data "the list pf datable OS'es include:"
+            data "the list of datable OS'es include:"
+            stop music 
+            play music windows loop
             data "Windows" with dissolve 
+            stop music 
+            play music linux loop
             data "Linux" with dissolve 
+            stop music 
+            play music mac loop
             data "MacOS" with dissolve 
+            stop music 
+            play music android loop
             data "Android" with dissolve 
+            stop music
+            play music amiga loop
+<<<<<<< HEAD
+            show holdamiga at truecenter
             data "Amiga" with dissolve 
-            data "Unix" with dissolve 
+            stop music
+            hide holdamiga
+            play music unix loop
+            data "Unix" with dissolve       
+            play music redstar loop
+            show redstar
             data "Redstar" with dissolve 
+            stop music
+            hide redstar
+            play music templeos loop
+            show holdtemp
             data "TempleOS" with dissolve 
-            data "DOS" with dissolve 
+            hide holdtemp
+            stop music
+            play music dos loop
+            data "DOS" with dissolve
+            play music bsd loop
             data "BSD" with dissolve 
+            stop music
+            
+=======
+            data "Amiga" with dissolve 
+            stop music
+            play music unix loop
+            data "Unix" with dissolve 
+            
+            play music redstar loop
+            data "Redstar" with dissolve 
+            stop music
+            play music templeos loop
+            data "TempleOS" with dissolve 
+            stop music
+            play music dos loop
+            data "DOS" with dissolve
+            
+            data "BSD" with dissolve 
+            stop music
+            play music bsd loop
+>>>>>>> 63d4264d817a76cded6d6e00b194c8c6a4dd0afe
             data "BEOS" with dissolve 
+            stop music 
+            play music haiku loop
             data "Haiku" with dissolve 
+            stop music
+            play music maintheme2
+        
             jump ask_question 
         "Begin game": 
             play audio startgame
