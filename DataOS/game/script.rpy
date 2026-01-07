@@ -87,6 +87,10 @@ label start:
     data "if this is your first time playing"
     data "than here is some simple questions, you'll get answers to"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    stop music
+>>>>>>> 63d4264d817a76cded6d6e00b194c8c6a4dd0afe
 =======
     stop music
 >>>>>>> 63d4264d817a76cded6d6e00b194c8c6a4dd0afe
@@ -113,6 +117,7 @@ label start:
             stop music
             play music amiga loop
 <<<<<<< HEAD
+<<<<<<< HEAD
             show holdamiga at truecenter
             data "Amiga" with dissolve 
             stop music
@@ -135,6 +140,25 @@ label start:
             data "BSD" with dissolve 
             stop music
             
+=======
+            data "Amiga" with dissolve 
+            stop music
+            play music unix loop
+            data "Unix" with dissolve 
+            
+            play music redstar loop
+            data "Redstar" with dissolve 
+            stop music
+            play music templeos loop
+            data "TempleOS" with dissolve 
+            stop music
+            play music dos loop
+            data "DOS" with dissolve
+            
+            data "BSD" with dissolve 
+            stop music
+            play music bsd loop
+>>>>>>> 63d4264d817a76cded6d6e00b194c8c6a4dd0afe
 =======
             data "Amiga" with dissolve 
             stop music
