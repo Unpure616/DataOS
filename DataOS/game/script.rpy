@@ -93,6 +93,8 @@ label start:
 
     stop music
 
+>>>>>>> 63d4264d817a76cded6d6e00b194c8c6a4dd0afe
+    stop music
     menu ask_question:
         data "Any questions before we begin?" with dissolve
 
@@ -115,8 +117,36 @@ label start:
             data "Android" with dissolve 
             stop music
             play music amiga loop
+<<<<<<< HEAD
 
             show holdamiga at truecenter
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            show holdamiga at truecenter
+            data "Amiga" with dissolve 
+            stop music
+            hide holdamiga
+            play music unix loop
+            data "Unix" with dissolve       
+            play music redstar loop
+            show redstar
+            data "Redstar" with dissolve 
+            stop music
+            hide redstar
+            play music templeos loop
+            show holdtemp
+            data "TempleOS" with dissolve 
+            hide holdtemp
+            stop music
+            play music dos loop
+            data "DOS" with dissolve
+            play music bsd loop
+            data "BSD" with dissolve 
+            stop music
+            
+=======
+>>>>>>> 0d66559f69305eca2a3f8355a7c476fbf569a912
             data "Amiga" with dissolve 
             stop music
             hide holdamiga
@@ -134,6 +164,23 @@ label start:
             stop music
             play music bsd loop
 
+            data "Amiga" with dissolve 
+            stop music
+            play music unix loop
+            data "Unix" with dissolve 
+            
+            play music redstar loop
+            data "Redstar" with dissolve 
+            stop music
+            play music templeos loop
+            data "TempleOS" with dissolve 
+            stop music
+            play music dos loop
+            data "DOS" with dissolve
+            
+            data "BSD" with dissolve 
+            stop music
+            play music bsd loop
             data "BEOS" with dissolve 
             stop music 
             play music haiku loop
